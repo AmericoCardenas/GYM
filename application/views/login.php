@@ -13,7 +13,7 @@
 
         <style>
             .r1{
-                margin-top:50px !important;
+                margin-top:100px !important;
             }
 
             label{
@@ -33,44 +33,48 @@
             body{
                 background-image:url("<?php echo base_url();?>application/assets/img/background.jpeg");
                 font-family: 'Roboto', sans-serif;
+            
             }
 
             .box{
                 border-radius: 6px !important;
-                height:auto;
-                width:auto;
                 border: 6px solid black;
                 background-color:rgb(255,182,18);
             }
 
             .r2{
-                margin-top:60px !important;
+                margin-top:160px !important;
+                text-align:center !important;
             }
+
         </style>
     </head>
 
     <body>
         <div class="container" style="text-align:center !important">
 
-            <div class="row r1">
+            <!-- <div class="row r1">
                 <div class="col-md-12 col-sm-12">
                     <h1>Login</h1>
                 </div>
-            </div>
+            </div> -->
 
             <div class="row r2">
-                <div class="col-md-4"></div>
-                    <div class="col-md-4 box">
-                        <h2>GYM</h2>
-                        <form action="" method="post">
-                            <label for="">Email:</label>
-                            <input type="email" class="form-control" name="" id="">
-                            <label for="">Contraseña</label>
-                            <input type="password" class="form-control" name="" id="">
-                            <button type="submit" class="btn btn-dark">Iniciar Sesion</button>
-                        </form>
+                <div class="col-md-4 col-sm-4"></div>
+                    <div class="col-md-4 col-sm-4 box" style="text-align:center;">
+                        
+                            <img src="<?php echo base_url();?>application/assets/img/logo.jpg" class="img-fluid" width="150px" height="200px" style="margin-top:20px">
+                            <form action="" method="post">
+    
+                                <label for="">Email:</label>
+                                <input type="email" class="form-control" name="" id="" placeholder="tu_email@.com">
+                                <label for="">Contraseña</label>
+                                <input type="password" class="form-control" name="" id="" placeholder="contraseña">
+                                <button type="submit" class="btn btn-dark">Iniciar Sesion</button>
+                            </form>
+                        
                     </div>
-                <div class="col-md-4"></div>
+                <div class="col-md-4 col-sm-4"></div>
             </div>
 
         </div>
