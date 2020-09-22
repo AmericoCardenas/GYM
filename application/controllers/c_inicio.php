@@ -9,5 +9,9 @@ class C_inicio extends CI_Controller {
 		$this->load->view('login');
 	}
 
+	public function registro()
+	{
+		$this->load->view('registro');
+	}
 
 }

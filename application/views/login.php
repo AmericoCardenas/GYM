@@ -64,13 +64,14 @@
                     <div class="col-md-4 col-sm-4 box" style="text-align:center;">
                         
                             <img src="<?php echo base_url();?>application/assets/img/logo.jpg" class="img-fluid" width="150px" height="200px" style="margin-top:20px">
-                            <form action="" method="post">
+                            <form method="post">
     
                                 <label for="">Email:</label>
                                 <input type="email" class="form-control" name="" id="" placeholder="tu_email@.com">
                                 <label for="">Contraseña</label>
                                 <input type="password" class="form-control" name="" id="" placeholder="contraseña">
-                                <button type="submit" class="btn btn-dark">Iniciar Sesion</button>
+                                <button type="submit" class="btn btn-dark" formaction="">Iniciar Sesion</button>
+                                <button type="submit" class="btn btn-dark" formaction="<?php echo base_url()?>c_inicio/registro">Registrarse</button>
                             </form>
                         
                     </div>
