@@ -33,6 +33,8 @@
             body{
                 background-image:url("<?php echo base_url();?>application/assets/img/background.jpeg");
                 font-family: 'Roboto', sans-serif;
+                width:auto !important;
+                height:auto !important;
             
             }
 
@@ -43,7 +45,9 @@
             }
 
             .r2{
-                margin-top:160px !important;
+                margin-top: 50px;
+                margin-left: auto;
+                margin-right: auto;
                 text-align:center !important;
             }
 
@@ -70,7 +74,7 @@
                                 <input type="email" class="form-control" name="" id="" placeholder="tu_email@.com">
                                 <label for="">Contraseña</label>
                                 <input type="password" class="form-control" name="" id="" placeholder="contraseña">
-                                <button type="submit" class="btn btn-dark" formaction="">Iniciar Sesion</button>
+                                <button type="submit" class="btn btn-dark" formaction="<?php echo base_url()?>c_inicio/menu">Iniciar Sesion</button>
                                 <button type="submit" class="btn btn-dark" formaction="<?php echo base_url()?>c_inicio/registro">Registrarse</button>
                             </form>
                         

@@ -7,7 +7,7 @@ class C_cont extends CI_Controller {
 	{
 			parent::__construct();
 			$this->load->model('c_models');
-			$this->load->helper('form', 'url');
+			$this->load->helper(array('form', 'url'));
 	}
 
 
@@ -24,7 +24,11 @@ class C_cont extends CI_Controller {
 
 		$config['upload_path']          = './uploads/';
 		$config['allowed_types']        = '*';
-		$this->load->library('upload', $config);
+		$config['max_size']        = '15000';
+		$this->load->library('upload',$config);
+		$this->upload->initialize($config);
+		
+
 		if($this->upload->do_upload('foto')){
 
 		$usuario_datos = array(
@@ -36,7 +40,7 @@ class C_cont extends CI_Controller {
 			'EDAD'=>$edad,
 			'PESO'=>$peso,
 			'PLAN'=>$plan,
-			'FOTO'=>$this->upload->data());
+			'FOTO'=>$this->upload->data('file_name'));
 
 		$usuario = $this->c_models->registrar_usuario($usuario_datos);
 
@@ -51,7 +55,9 @@ class C_cont extends CI_Controller {
 	  }else
 		{
 			$error = array('error' => $this->upload->display_errors());
-			echo $error;
+			foreach($error as $item){
+				echo $item;
+			}
 			
 		}
 	}

@@ -1,5 +1,3 @@
-<?php echo $error; ?>
-
 <html>
 <head>
         <title>Login/Clientes</title>
@@ -46,11 +44,12 @@
     <div class="row" style="margin-top:30px !important;text-align:center!important;">
         <div class="col-md-4 col-sm-4"></div>   
         <div class="col-md-4 col-sm-4">    
-            <form method="post">
+        <?php echo form_open_multipart('c_cont/registro');?>
+            <form method="post" enctype="multipart/form-data">
                 <div class="form-row">  
 
                     <div class="form-group col-md-12 col-sm-12">
-                    <img src="<?php echo base_url();?>application/assets/img/logo.jpg" enctype="multipart/form-data" class="img-fluid" width="150px" height="200px" style="margin-top:20px">
+                    <img src="<?php echo base_url();?>application/assets/img/logo.jpg" class="img-fluid" width="150px" height="200px" style="margin-top:20px">
                     </div>
                   
                     <!--NOMBRE-->
@@ -123,7 +122,8 @@
                     <div class="form-group col-md-12 col-sm-12">       
                     <button type="submit" class="btn btn-dark" value="upload" formaction="<?php echo base_url()?>c_cont/registro">Registrarse</button>
                     </div>
-                </div>   
+                </div>  
+                <?php echo form_close(); ?>
             </form>
         </div>
         <div class="col-md-4 col-sm-4"></div>

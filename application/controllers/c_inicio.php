@@ -14,4 +14,9 @@ class C_inicio extends CI_Controller {
 		$this->load->view('registro');
 	}
 
+	public function menu()
+	{
+		$this->load->view('menu');
+	}
+
 }
