@@ -71,10 +71,10 @@
                             <form method="post">
     
                                 <label for="">Email:</label>
-                                <input type="email" class="form-control" name="" id="" placeholder="tu_email@.com">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="tu_email@.com">
                                 <label for="">Contraseña</label>
-                                <input type="password" class="form-control" name="" id="" placeholder="contraseña">
-                                <button type="submit" class="btn btn-dark" formaction="<?php echo base_url()?>c_inicio/menu">Iniciar Sesion</button>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="contraseña">
+                                <button type="submit" class="btn btn-dark" formaction="<?php echo base_url()?>c_cont/login">Iniciar Sesion</button>
                                 <button type="submit" class="btn btn-dark" formaction="<?php echo base_url()?>c_inicio/registro">Registrarse</button>
                             </form>
                         

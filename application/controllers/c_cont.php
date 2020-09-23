@@ -61,4 +61,27 @@ class C_cont extends CI_Controller {
 			
 		}
 	}
+
+	public function login(){
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+
+		if(isset($email) && isset($password)){
+			
+			$usuario_credenciales = array(
+			'EMAIL'=>$email,
+			'PASSWORD'=>$password);
+			
+			$resultado = $this->c_models->login($usuario_credenciales);
+
+			if($resultado>0){
+				echo"<script>alert('Bienvenido');</script>";
+				$this->load->view('menu');
+			}else{
+				echo"<script>alert('Credenciales Invalidas');</script>";
+				$this->load->view('login');
+			}
+
+		}
+	}
 }

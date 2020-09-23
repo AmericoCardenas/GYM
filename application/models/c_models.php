@@ -14,6 +14,11 @@ class C_models extends CI_Model{
        return $result;
     }
 
+    public function login($usuario_credenciales){
+        $result = $this->db->where('usuarios',$usuario_credenciales);
+        return $result;
+    }
+
 }
 
 

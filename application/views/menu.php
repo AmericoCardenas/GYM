@@ -16,7 +16,7 @@
 
     <style>
       label{
-        font-size:28px !important;
+        font-size:auto !important;
         color: rgb(35, 39, 43);
         font-weight:bold;
       }
@@ -24,6 +24,7 @@
       input{
         border:0px!important;
         background-color:transparent;
+        color: rgb(35, 39, 43);
       }
 
       button{
