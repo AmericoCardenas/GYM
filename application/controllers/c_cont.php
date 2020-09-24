@@ -72,11 +72,12 @@ class C_cont extends CI_Controller {
 			'EMAIL'=>$email,
 			'PASSWORD'=>$password);
 			
-			$resultado = $this->c_models->login($usuario_credenciales);
+			$resultado = $this->c_models->login($usuario_credenciales); //SE VALIDA EMAIL Y PASSWORD
+			$datos['usuario'] = $this->c_models->get_usuario($usuario_credenciales); //SE OBTIENEN LOS DATOS DEL USUARIO
 
-			if($resultado>0){
+			if($resultado){
 				echo"<script>alert('Bienvenido');</script>";
-				$this->load->view('menu');
+				$this->load->view('menu',$datos);
 			}else{
 				echo"<script>alert('Credenciales Invalidas');</script>";
 				$this->load->view('login');

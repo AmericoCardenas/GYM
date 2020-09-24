@@ -25,6 +25,8 @@
         border:0px!important;
         background-color:transparent;
         color: rgb(35, 39, 43);
+        font-size:16px !important;
+        font-weight:bold !important;
       }
 
       button{
@@ -40,6 +42,17 @@
 
       main{
         border: 1px solid black;
+      }
+
+      .form-control{
+        background-color:black !important;
+        color:rgb(255,182,18) !important;
+        text-align:center !important;
+      }
+
+      img{
+        border-radius: 50% !important;
+        border: black solid 3px;
       }
       
     </style>
@@ -58,42 +71,54 @@
             </li>
 
             <li class="nav-item">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/User_with_smile.svg/1024px-User_with_smile.svg.png" width="150px" height="150px">
+              <?php foreach($usuario as $row){ ?>
+              <img class="img-fluid" src="<?php echo base_url().'uploads/'.$row['FOTO'] ?>">
+              <?php } ?>
             </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active">
                 <label for="">Nombre</label>
-                <input type="text" name="nombre" id="nombre" value="" readonly>
+                <?php foreach($usuario as $row){ ?>
+                <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $row['NOMBRE']?>" readonly>
+                <?php } ?>
                 </a>
               </li>
 
 
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active">
                 <label for="">Fecha de Ingreso</label>
-                <input type="text" name="fi" id="fi" value="" readonly>
+                <?php foreach($usuario as $row){ ?>
+                <input type="date" class="form-control" name="fi" id="fi" value="<?php echo $row['FI']?>" readonly>
+                <?php } ?>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="#">
-                <label for="">Edad</label> 
-                <input type="text" name="edad" id="edad" value="" readonly>
+                <a class="nav-link active">
+                <label for="">Edad</label>
+                <?php foreach($usuario as $row){ ?>
+                <input type="text" class="form-control" name="edad" id="edad" value="<?php echo $row['EDAD']?>" readonly>
+                <?php } ?>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active">
                 <label for="">Peso Kg</label>
-                <input type="text" name="peso" id="peso" value="" readonly>
+                <?php foreach($usuario as $row){ ?>
+                <input type="text" class="form-control" name="peso" id="peso" value="<?php echo $row['PESO']?>" readonly>
+                <?php } ?>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active">
                 <label for="">Plan</label>
-                <input type="text" name="plan" id="plan" value="" readonly>
+                <?php foreach($usuario as $row){ ?>
+                <input type="text" class="form-control" name="plan" id="plan" value="<?php echo $row['PLAN']?>" readonly>
+                <?php } ?>
                 </a>
               </li>
             </ul>   
